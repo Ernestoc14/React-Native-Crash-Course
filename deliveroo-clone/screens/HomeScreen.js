@@ -1,11 +1,11 @@
-import { View, Text, Image, TextInput } from "react-native";
+import { View, Text, Image, TextInput, ScrollView } from "react-native";
 import React, { useLayoutEffect } from "react";
 import { useNavigation } from "@react-navigation/native";
 import { SafeAreaView } from "react-native-safe-area-context";
 import {
   UserIcon,
   ChevronDownIcon,
-  SearchIcon,
+  MagnifyingGlassIcon,
   AdjustmentsVerticalIcon,
 } from "react-native-heroicons/outline";
 
@@ -19,10 +19,10 @@ const HomeScreen = () => {
   }, []);
 
   return (
-    <SafeAreaView className="bg-white pt-3">
+    <SafeAreaView className="bg-white">
       <Text className="text-yellow-300">
         {/* Header */}
-        <View className="flex-row pb-3 items-center mx-4 space-x-2">
+        <View className="flex-row items-center mx-4 px-2 space-x-2">
           <Image
             source={{
               uri: "https://links.papareact.com/wru",
@@ -40,10 +40,11 @@ const HomeScreen = () => {
           </View>
           <UserIcon size={28} color="#FF77AA" />
         </View>
+
         {/* Search Bar */}
-        <View>
-          <View className="">
-            <SearchIcon />
+        <View className="flex-row items-center space-x-2 pb-2 mx-4 px-2">
+          <View className="flex-row flex-1 space-x-2 bg-gray-200 p-1 m-2">
+            <MagnifyingGlassIcon color="#FF77AA" />
             <TextInput
               placeholder="Restaurants and Cuisines"
               keyboardType="default"
@@ -51,6 +52,13 @@ const HomeScreen = () => {
           </View>
           <AdjustmentsVerticalIcon color="#FF77AA" />
         </View>
+
+        {/* Body */}
+            <ScrollView>
+              {/* Categories */}
+
+              {/* Featured Rows */}
+            </ScrollView>
       </Text>
     </SafeAreaView>
   );
