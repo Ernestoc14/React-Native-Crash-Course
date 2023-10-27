@@ -34,6 +34,30 @@ const FeaturedRow = ({ id, title, description }) => {
           long={20}
           lat={0}
         />
+        <RestaurantCard
+          id={123}
+          imgUrl="https://links.papareact.com/gn7"
+          title="Yo Sushi"
+          genre="Japanese"
+          rating={4.5}
+          address="123 Main Str"
+          short_description="We have Sushi"
+          dishes={[]}
+          long={20}
+          lat={0}
+        />
+        <RestaurantCard
+          id={123}
+          imgUrl="https://links.papareact.com/gn7"
+          title="Yo Sushi"
+          genre="Japanese"
+          rating={4.5}
+          address="123 Main Str"
+          short_description="We have Sushi"
+          dishes={[]}
+          long={20}
+          lat={0}
+        />
       </ScrollView>
     </View>
   );
